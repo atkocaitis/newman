@@ -21,3 +21,7 @@ npx newman run Airalo.postman_collection.json --env-var "client_id={CLIENT_ID}" 
 
 * All tested endpoints are verified for correct status codes and JSON schema validation of responses.
 * Tests utilize dynamic test data for validating created orders (timestamps), enabling them to be executed multiple times without modification.
+
+## Noted issues
+
+* Incorrect Status Codes: When the authentication token is invalid or not provided, the expected status code should be 403 (Forbidden). Currently, it returns a 404 (Not Found).
